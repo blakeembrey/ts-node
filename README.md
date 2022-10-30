@@ -12,8 +12,8 @@ You can build the readme with this command:
 
 # [![TypeScript Node](logo.svg?sanitize=true)](https://typestrong.org/ts-node)
 
-[![NPM version](https://img.shields.io/npm/v/ts-node.svg?style=flat)](https://npmjs.org/package/ts-node)
-[![NPM downloads](https://img.shields.io/npm/dm/ts-node.svg?style=flat)](https://npmjs.org/package/ts-node)
+[![npm version](https://img.shields.io/npm/v/ts-node.svg?style=flat)](https://npmjs.org/package/ts-node)
+[![npm downloads](https://img.shields.io/npm/dm/ts-node.svg?style=flat)](https://npmjs.org/package/ts-node)
 [![Build status](https://img.shields.io/github/actions/workflow/status/TypeStrong/ts-node/continuous-integration.yml?branch=main)](https://github.com/TypeStrong/ts-node/actions?query=workflow%3A%22Continuous+Integration%22)
 [![Test coverage](https://codecov.io/gh/TypeStrong/ts-node/branch/main/graph/badge.svg)](https://codecov.io/gh/TypeStrong/ts-node)
 
@@ -121,7 +121,7 @@ The latest documentation can also be found on our website: <https://typestrong.o
         *   [CommonJS](#commonjs-1)
         *   [Native ECMAScript modules](#native-ecmascript-modules-1)
     *   [Gulp](#gulp)
-    *   [IntelliJ and Webstorm](#intellij-and-webstorm)
+    *   [IntelliJ and WebStorm](#intellij-and-webstorm)
     *   [Mocha](#mocha)
         *   [Mocha 7 and newer](#mocha-7-and-newer)
         *   [Mocha <=6](#mocha-6)
@@ -1346,7 +1346,7 @@ gulp
 
 See also: https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles#transpilation
 
-## IntelliJ and Webstorm
+## IntelliJ and WebStorm
 
 Create a new Node.js configuration and add `-r ts-node/register` to "Node parameters."
 
