@@ -1,5 +1,5 @@
 ---
-title: "IntelliJ and Webstorm"
+title: "IntelliJ and WebStorm"
 ---
 
 Create a new Node.js configuration and add `-r ts-node/register` to "Node parameters."
