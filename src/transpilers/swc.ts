@@ -225,14 +225,15 @@ export function createSwcOptions(
         parser: {
           syntax: 'typescript',
           tsx: isTsx,
-          decorators: experimentalDecorators,
+          decorators: true,
           dynamicImport: true,
           importAssertions: true,
         } as swcWasm.TsParserConfig,
         target: swcTarget as swcWasm.JscTarget,
         transform: {
           decoratorMetadata: emitDecoratorMetadata,
-          legacyDecorator: true,
+          legacyDecorator: experimentalDecorators,
+          decoratorVersion: experimentalDecorators ? '2021-12' : '2022-03',
           react: {
             throwIfNamespace: false,
             development: jsxDevelopment,
