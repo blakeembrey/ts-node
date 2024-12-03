@@ -13,6 +13,16 @@ export interface SwcTranspilerOptions extends CreateTranspilerOptions {
    * Default: '@swc/core', falling back to '@swc/wasm'
    */
   swc?: string | typeof swcWasm;
+
+  /**
+   * This will look for the swc configuration file either at the path
+   * specified, or using the default .swcrc lookup mechanism of swc if set to true
+   *
+   * It will look for nothing if set to false.
+   *
+   * Default: false
+   */
+  swcConfig?: boolean | string;
 }
 
 export function create(createOptions: SwcTranspilerOptions): Transpiler {
@@ -127,7 +137,8 @@ export function createSwcOptions(
   compilerOptions: ts.CompilerOptions,
   nodeModuleEmitKind: NodeModuleEmitKind | undefined,
   swcInstance: SwcInstance,
-  swcDepName: string
+  swcDepName: string,
+  swcConfig?: SwcTranspilerOptions['swcConfig']
 ) {
   const {
     esModuleInterop,
@@ -219,7 +230,8 @@ export function createSwcOptions(
               : {}),
           }
         : undefined,
-      swcrc: false,
+      swcrc: swcConfig === true ? swcConfig : false,
+      configFile: typeof swcConfig === 'string' ? swcConfig : undefined,
       jsc: {
         externalHelpers: importHelpers,
         parser: {

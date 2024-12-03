@@ -22,4 +22,15 @@ Then add the following to your `tsconfig.json`.
 }
 ```
 
+Note, if you are using a swc configuration file, you can tell ts-node to load the file by supplying the swcConfig argument:
+
+```json title="tsconfig.json"
+{
+  "ts-node": {
+    "swc": true,
+    "swcConfig": ".development.scwrc"
+  }
+}
+```
+
 > SWC uses `@swc/helpers` instead of `tslib`.  If you have enabled `importHelpers`, you must also install `@swc/helpers`.
