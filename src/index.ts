@@ -218,6 +218,13 @@ export interface CreateOptions {
    */
   swc?: boolean;
   /**
+   * If using swc as the compiler, this will look for the swc configuration file either at the path
+   * specified, or using the default .swcrc lookup mechanism of swc if set to true
+   *
+   * It will look for nothing if set to false.
+   */
+  swcConfig?: boolean | string;
+  /**
    * Paths which should not be compiled.
    *
    * Each string in the array is converted to a regular expression via `new RegExp()` and tested against source paths prior to compilation.
