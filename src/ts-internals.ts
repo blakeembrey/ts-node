@@ -48,7 +48,7 @@ function createTsInternalsUncached(_ts: TSCommon) {
       host,
       /*cache*/ undefined,
       /*projectRefs*/ undefined,
-      /*conditionsOrIsConfigLookup*/ tsGte5_3_0 ? undefined : true,
+      /*conditionsOrIsConfigLookup*/ tsGte5_3_0 ? [] : true,
       /*isConfigLookup*/ tsGte5_3_0 ? true : undefined
     );
     if (resolved.resolvedModule) {
